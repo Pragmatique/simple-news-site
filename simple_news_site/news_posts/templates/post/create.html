@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}Adding news{% endblock %}
+
+{% block content %}
+<script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+  <h1>Adding news</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <h3>Adding news</h3>
+        {{ post_form.media }}
+        {{ post_form.as_p }}
+        <button type="submit" class="btn btn-primary">Post news</button>
+    </form>
+    <h4>If you'r not Administrator or not Editor, your news will be posted after confirming by the site Administration</h4>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+    <h1>Registration</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <h3>User info</h3>
+        {{ user_form|crispy }}
+        <button type="submit" class="btn btn-primary">Sign up</button>
+    </form>
+    <h4>After registration we'll send you verification letter to your mail!</h4>
+{% endblock %}
