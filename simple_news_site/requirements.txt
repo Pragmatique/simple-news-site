@@ -6,4 +6,4 @@ django-crispy-forms==1.8.1
 django-js-asset==1.2.2
 pytz==2019.3
 soupsieve==1.9.5
-sqlparse==0.3.0
+sqlparse==0.4.4
